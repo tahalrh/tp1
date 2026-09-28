@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Projet HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">🚀 MonProjet</div>
+            <button id="theme-toggle" class="btn-icon" aria-label="Changer de thème">🌙</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Bienvenue sur mon premier projet Web</h1>
+            <p class="subtitle">Une structure simple, propre et moderne avec HTML5, CSS3 et JavaScript.</p>
+            <div class="actions">
+                <button id="action-btn" class="btn btn-primary">Cliquez-moi !</button>
+                <a href="#features" class="btn btn-outline">En savoir plus</a>
+            </div>
+            <p id="counter-text" class="counter-display">Nombre de clics : <span id="click-count">0</span></p>
+        </section>
+
+        <section id="features" class="features-grid">
+            <div class="card">
+                <div class="card-icon">📄</div>
+                <h2>HTML5 Sémantique</h2>
+                <p>Structure claire et optimisée pour le référencement et l'accessibilité.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎨</div>
+                <h2>CSS3 Moderne</h2>
+                <p>Mise en page responsive avec Flexbox, CSS Grid et variables de couleurs.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h2>JavaScript Interactif</h2>
+                <p>Interactions simples : compteur de clics et bascule de mode sombre/clair.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 MonProjet. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
