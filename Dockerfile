@@ -1,15 +1,11 @@
-# 1. Définir l'image de base (environnement)
-# Exemples : ubuntu:22.04, python:3.9, node:18-alpine, nginx:latest
-FROM python:3.9
+# 1. Image de base : serveur web Nginx leger sous Alpine Linux
+FROM nginx:alpine
 
-# 2. Créer et définir le dossier de travail dans le conteneur
-WORKDIR /app
+# 2. Copier les fichiers du site web (HTML, CSS, JS) dans le repertoire de Nginx
+COPY . /usr/share/nginx/html
 
-# 3. Copier les fichiers de votre PC (dossier actuel) vers le conteneur (/app)
-COPY . /app
+# 3. Informer Docker que le conteneur ecoute sur le port 80
+EXPOSE 80
 
-# 4. Exécuter des commandes pour installer des dépendances (si nécessaire)
-RUN pip install -r requirements.txt
-
-# 5. Définir la commande par défaut au lancement du conteneur
-CMD ["python", "main.py"]
+# 4. Lancer Nginx au premier plan pour maintenir le conteneur actif
+CMD ["nginx", "-g", "daemon off;"]
